@@ -1,3 +1,7 @@
+#content{
+  margin-top: 150px;
+}
+
 .navbar {
   background: white;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -25,6 +29,12 @@
 .navbar .navbar-toggler {
   border: none;
   padding: 0.2rem 0.4rem;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -66,35 +76,12 @@
   padding: 0.5rem;
 }
 
-.navbar .navbar-nav {
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-}
-
-.navbar::before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #e6e6e6;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-@media (min-width: 768px) {
-  .navbar .navbar-nav {
-    justify-content: flex-end;
-  }
-}
-
 .navbar-tech-categories {
   background: white;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   align-items: center;
   position: fixed;
-  top: 56px;
+  top: 56px; /* Adjust based on the height of your original navbar */
   width: 100%;
   z-index: 999;
 }
@@ -109,5 +96,5 @@
   font-weight: bold;
   padding: 0.5rem 0.75rem;
   font-size: 0.9rem;
-  margin: 0.25rem 0; /* Adjust margin top and bottom */
+  margin: 0.25rem 0;
 }

@@ -12,9 +12,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <input type="text" class="form-control search-bar" placeholder="Search for items">
-          <li class="nav-item active">
-            <%= link_to "Upload Product", "#", class: "nav-link" %>
-          </li>
+
           <li class="nav-item active">
             <%= link_to "Upload Product", new_product_path, class: "nav-link" %>
           <li class="nav-item active">

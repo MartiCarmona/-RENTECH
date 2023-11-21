@@ -1,5 +1,12 @@
+body, html {
+  overflow-x: hidden;
+}
+
 #content{
   margin-top: 150px;
+  padding-left: 7.3rem;
+  padding-right: 7.3rem;
+  word-wrap: break-word;
 }
 
 .navbar {
@@ -14,7 +21,7 @@
 }
 
 .container-fluid {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 1rem;
   margin: 0 auto;
   max-width: calc(100% - 12rem);
   width: 100%;
@@ -79,11 +86,14 @@
 .navbar-tech-categories {
   background: white;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  align-items: center;
+  /* align-items: center; */
   position: fixed;
-  top: 56px; /* Adjust based on the height of your original navbar */
+  top: 67.3333px;
   width: 100%;
+  height: 6%;
   z-index: 999;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-tech-categories .navbar-nav {
@@ -95,6 +105,6 @@
   text-transform: uppercase;
   font-weight: bold;
   padding: 0.5rem 0.75rem;
-  font-size: 0.9rem;
-  margin: 0.25rem 0;
+  font-size: 0.8rem;
+  /* margin: 0.25rem 0; */
 }

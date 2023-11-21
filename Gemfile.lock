@@ -125,6 +125,9 @@ GEM
       warden (~> 1.2.3)
     domain_name (0.6.20231109)
     dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     drb (2.2.0)
       ruby2_keywords
     error_highlight (0.5.1)
@@ -298,6 +301,7 @@ GEM
 PLATFORMS
   aarch64-linux
   arm64-darwin-22
+  arm64-darwin-23
   x86_64-linux
 
 DEPENDENCIES
@@ -308,7 +312,7 @@ DEPENDENCIES
   cloudinary
   debug
   devise
-  dotenv
+  dotenv-rails
   error_highlight (>= 0.4.0)
   font-awesome-sass (~> 6.1)
   importmap-rails

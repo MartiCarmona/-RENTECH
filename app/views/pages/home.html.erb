@@ -1,5 +1,7 @@
 <!-- app/views/pages/home.html.erb -->
+
 <section id="content">
+
 <h1>Welcome to the Home Page</h1>
 
 <% @products.each do |product| %>
@@ -7,6 +9,7 @@
     <%= image_tag product.image if product.image.attached? %>
     <h2><%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %></h2>
     <p><%= product.title %></p>
+    <p><%= product.description %></p>
     <!-- Add more details as needed -->
   </div>
 <% end %>
@@ -16,4 +19,6 @@
     <%= value %>
   </div>
 <% end %>
+
 </section>
+

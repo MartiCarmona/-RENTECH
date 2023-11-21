@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_21_120336) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_21_135811) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,48 +43,37 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_21_120336) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "product_id"
-    t.datetime "date"
+    t.bigint "product_id", null: false
+    t.date "start_date"
+    t.date "end_date"
     t.string "status"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_bookings_on_product_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-  create_table "chats", force: :cascade do |t|
-    t.bigint "renter_id"
-    t.bigint "owner_id"
-    t.bigint "product_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["owner_id"], name: "index_chats_on_owner_id"
-    t.index ["product_id"], name: "index_chats_on_product_id"
-    t.index ["renter_id"], name: "index_chats_on_renter_id"
-  end
-
   create_table "products", force: :cascade do |t|
     t.string "title"
-    t.text "description"
-    t.decimal "price"
-    t.bigint "user_id"
+    t.string "description"
+    t.float "price_per_day"
+    t.bigint "user_id", null: false
+    t.string "condition"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "condition"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
 
-  create_table "rentals", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "product_id"
-    t.datetime "start_date"
-    t.datetime "end_date"
-    t.string "status"
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.text "content"
+    t.bigint "booking_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_rentals_on_product_id"
-    t.index ["user_id"], name: "index_rentals_on_user_id"
+    t.index ["booking_id"], name: "index_reviews_on_booking_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -105,10 +94,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_21_120336) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookings", "products"
   add_foreign_key "bookings", "users"
-  add_foreign_key "chats", "products"
-  add_foreign_key "chats", "users", column: "owner_id"
-  add_foreign_key "chats", "users", column: "renter_id"
   add_foreign_key "products", "users"
-  add_foreign_key "rentals", "products"
-  add_foreign_key "rentals", "users"
+  add_foreign_key "reviews", "bookings"
+  add_foreign_key "reviews", "users"
 end

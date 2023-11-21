@@ -26,10 +26,10 @@ class ProductsController < ApplicationController
       render :new
     end
   end
-  
+
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :price, :condition, :image)
+    params.require(:product).permit(:title, :description, :price_per_day, :condition, :image)
   end
 end

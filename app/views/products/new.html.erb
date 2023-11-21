@@ -1,0 +1,28 @@
+<%= form_for @product, html: { multipart: true } do |f| %>
+  <div class="mb-3">
+    <%= f.label :image, class: "form-label" %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :title, class: "form-label" %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :description, class: "form-label" %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :price, class: "form-label" %>
+    <%= f.number_field :price, class: "form-control", step: "0.01" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :condition, class: "form-label" %>
+    <%= f.select :condition, options_for_select(["New", "Used"]), {}, { class: "form-control" } %>
+  </div>
+
+  <%= f.submit "Upload Product", class: "btn btn-primary" %>
+<% end %>

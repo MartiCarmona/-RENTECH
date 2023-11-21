@@ -19,9 +19,9 @@
     <%= f.number_field :price, class: "form-control", step: "0.01" %>
   </div>
 
-  <div class="mb-3">
+    <div class="mb-3">
     <%= f.label :condition, class: "form-label" %>
-    <%= f.select :condition, options_for_select(["New", "Used"]), {}, { class: "form-control" } %>
+    <%= f.select :condition, options_for_select(["New - Never used before", "As new - In perfect conditions", "Good state - Well preserved", "Acceptable - Worth the price", "Very used - Deteriorated but functional", ]), {}, { class: "form-control" } %>
   </div>
 
   <%= f.submit "Upload Product", class: "btn btn-primary" %>

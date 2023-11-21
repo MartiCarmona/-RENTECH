@@ -1,0 +1,18 @@
+<!-- app/views/pages/home.html.erb -->
+
+<h1>Welcome to the Home Page</h1>
+
+<% @products.each do |product| %>
+  <div>
+    <%= image_tag product.image if product.image.attached? %>
+    <h2><%= product.price.to_i == product.price ? product.price.to_i : product.price %></h2>
+    <p><%= product.title %></p>
+    <!-- Add more details as needed -->
+  </div>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>">
+    <%= value %>
+  </div>
+<% end %>

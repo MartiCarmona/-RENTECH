@@ -1,13 +1,33 @@
 Rails.application.routes.draw do
+  # Devise routes for User authentication
   devise_for :users
-  root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  # Define root path (you can change the controller#action as needed)
+  root to: 'pages#home'
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+  # Resources for products
+  resources :products do
+    resources :bookings, only: [:create, :new] # Nested bookings within products for creating them
+  end
+
+  # Separate resources for bookings to handle other actions
+  resources :bookings, only: [] do
+    member do
+      patch 'accept'    # To accept a booking
+      patch 'decline'   # To decline a booking
+    end
+    resources :reviews, only: [:create, :new] # Nested reviews within bookings
+  end
+
+  # Routes for user profiles
+  resources :users, only: [:show] do
+    resources :products, only: [:index] # Nested products within users to show user's products
+    resources :bookings, only: [:index] # Nested bookings within users to show user's bookings
+    resources :reviews, only: [:index]  # Nested reviews within users to show user's reviews
+  end
+
+  # Other custom routes as required by your application
+  # Example: get 'search', to: 'products#search' # If you have a search action in products controller
+
+  # You can add more custom routes as required for your application
 end
-

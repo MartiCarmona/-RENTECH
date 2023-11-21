@@ -1,0 +1,36 @@
+<h1>New Product</h1>
+
+<% if flash[:alert] %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
+<%= form_for @product, html: { multipart: true } do |f| %>
+  <div class="mb-3">
+    <%= f.label :image, class: "form-label" %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :title, class: "form-label" %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :description, class: "form-label" %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :price, class: "form-label" %>
+    <%= f.number_field :price, class: "form-control", step: "0.01" %>
+  </div>
+
+    <div class="mb-3">
+    <%= f.label :condition, class: "form-label" %>
+    <%= f.select :condition, options_for_select(["New - Never used before", "As new - In perfect conditions", "Good state - Well preserved", "Acceptable - Worth the price", "Very used - Deteriorated but functional", ]), {}, { class: "form-control" } %>
+  </div>
+
+  <%= f.submit "Upload Product", class: "btn btn-primary" %>
+<% end %>

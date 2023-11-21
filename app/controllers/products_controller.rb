@@ -22,10 +22,11 @@ class ProductsController < ApplicationController
       flash[:success] = "Product successfully created!"
       redirect_to root_path
     else
+      flash.now[:alert] = "Image format must be JPEG, JPG, or PNG" if @product.errors[:image].include?('must be a JPEG, JPG, or PNG')
       render :new
     end
   end
-
+  
   private
 
   def product_params

@@ -1,97 +1,115 @@
 .product-show-container {
   background: #f4f4f4;
   padding: 2rem;
+  display: flex;
+  justify-content: center;
 
-  .product-header {
+  .product-card {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-
-    .profile-info {
-      display: flex;
-      align-items: center;
-
-      .profile-image {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-right: 1rem;
-      }
-
-      .profile-name {
-        font-size: 1rem;
-      }
-    }
-
-    .product-interactions {
-      button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        margin-left: 0.5rem;
-
-        &.btn-favorite {
-          color: #ff3b3b;
-        }
-
-        &.btn-chat {
-          color: #333;
-        }
-      }
-    }
-  }
-
-  .product-image-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    .product-image {
-      max-width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-    }
-  }
-
-  .product-info-wrapper {
     background: #fff;
-    padding: 1rem;
     border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
 
-    .product-price {
-      font-size: 1.25rem;
-      color: #333;
-      display: block;
+    .product-image-wrapper {
+      flex-basis: 70%;
+      max-width: 70%;
+      height: 500px;
+
+      .product-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
-    .product-title {
-      font-size: 1.5rem;
-      color: #333;
-      margin: 0.5rem 0;
-    }
 
-    .product-condition,
-    .product-category {
-      font-size: 1rem;
-      color: #666;
-      background: #e9ecef;
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.25rem;
-      display: inline-block;
-      margin-right: 0.5rem;
-    }
+    .product-details {
+      flex: 1;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-    .product-description {
-      font-size: 1rem;
-      color: #666;
-      line-height: 1.5;
-      margin-top: 1rem;
+      .rent-button-wrapper {
+        .btn-rent-now {
+          background-color: #5cdb95; // This is a placeholder color, adjust it to match your specific color
+          color: #ffffff; // This is a placeholder text color, adjust it to match your specific color
+          padding: 10px 20px;
+          border: none;
+          border-radius: 20px;
+          font-size: 16px;
+          font-weight: bold;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: darken($color: #5cdb95, $amount: 10%); // Darken the button on hover
+          }
+
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(93, 219, 149, 0.5); // A light glow effect that matches the button color
+          }
+
+          &:active {
+            background-color: darken($color: #5cdb95, $amount: 15%); // Even darker when the button is clicked
+          }
+        }
+      }
+
+
+      .product-interactions {
+        self-align: end;
+        button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          margin-left: 0.5rem;
+
+          &.btn-favorite {
+            color: #ff3b3b;
+          }
+
+          &.btn-chat {
+            color: #333;
+          }
+        }
+      }
+
+      .product-info {
+        .product-price {
+          font-size: 1.25rem;
+          color: #333;
+          display: block;
+        }
+
+        .product-title {
+          font-size: 1.5rem;
+          color: #333;
+          margin: 0.5rem 0;
+        }
+
+        .product-condition,
+        .product-category {
+          font-size: 1rem;
+          color: #666;
+          background: #e9ecef;
+          padding: 0.25rem 0.5rem;
+          border-radius: 0.25rem;
+          display: inline-block;
+          margin-right: 0.5rem;
+        }
+
+        .product-description {
+          font-size: 1rem;
+          color: #666;
+          line-height: 1.5;
+          margin-top: 1rem;
+        }
+      }
     }
   }
 }

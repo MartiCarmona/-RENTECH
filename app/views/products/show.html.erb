@@ -1,9 +1,21 @@
-<section id="content">
-  <%= image_tag(@product.image, class: 'product-image') if @product.image.attached? %>
-  <h1><%= @product.price_per_day %></h2>
-  <h2><%= @product.title %></h2>
-  <h3><%= @product.condition %></h3>
-  <h4><%= @product.description %></h3>
-  <h4><%= @product.category %></h3>
-      <!-- Add more details as needed -->
+<section id=content>
+  <section id="content" class="product-show-container">
+    <div class="product-header">
+      <div class="product-interactions">
+        <button class="btn-favorite">❤</button>
+        <button class="btn-chat">Chat</button>
+      </div>
+    </div>
+    <div class="product-image-wrapper">
+      <%= image_tag(@product.image, class: 'product-image') if @product.image.attached? %>
+    </div>
+
+    <div class="product-info-wrapper">
+      <span class="product-price"><%= number_to_currency(@product.price_per_day, unit: '€') %></span>
+      <h1 class="product-title"><%= @product.title %></h1>
+      <span class="product-condition"><%= @product.condition %></span>
+      <span class="product-category"><%= @product.category %></span>
+      <p class="product-description"><%= @product.description %></p>
+    </div>
+  </section>
 </section>

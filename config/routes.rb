@@ -10,6 +10,12 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create, :new] # Nested bookings within products for creating them
   end
 
+  get '/consoles', to: 'consoles#index'
+  get '/audios', to: 'audios#index'
+  get '/cameras', to: 'cameras#index'
+  get '/outdoors', to: 'outdoors#index'
+  get '/gadgets', to: 'gadgets#index'
+
   # Separate resources for bookings to handle other actions
   resources :bookings, only: [] do
     member do

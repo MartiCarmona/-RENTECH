@@ -1,0 +1,2 @@
+class Outdoor < ApplicationRecord
+end

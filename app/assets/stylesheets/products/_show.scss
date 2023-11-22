@@ -1,0 +1,67 @@
+/* app/assets/stylesheets/products.css */
+.product-show-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: #f8f9fa; /* Example color for the navbar */
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 50px; /* Example size, adjust as needed */
+  height: 50px;
+  margin-right: 10px;
+}
+
+.profile-name {
+  font-weight: bold;
+}
+
+.product-interactions button {
+  margin-left: 10px;
+}
+
+.product-image-wrapper {
+  margin-bottom: 20px;
+}
+
+.product-image {
+  width: 100%; /* Make the image responsive */
+}
+
+.product-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Adjust the ratio as needed */
+  gap: 20px;
+}
+
+.product-info-wrapper {
+  border: 1px solid #dee2e6; /* Example border color */
+  padding: 20px;
+}
+
+.product-description-wrapper {
+  grid-column: span 2; /* Make the description span across both columns */
+}
+
+.product-description {
+  border: 1px solid #dee2e6; /* Example border color */
+  padding: 20px;
+}

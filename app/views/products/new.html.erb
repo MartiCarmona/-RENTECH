@@ -26,13 +26,18 @@
   </div>
 
   <div class="mb-3">
-    <%= f.label :price_per_day, class: "form-label" %>
-    <%= f.number_field :price_per_day, class: "form-control", step: "0.01" %>
+    <%= f.label :category, class: "form-label" %>
+    <%= f.select :category, options_for_select(["Consoles", "Audio", "Cameras", "Outdoor", "Gadgets" ]), {}, { class: "form-control" } %>
   </div>
 
-    <div class="mb-3">
+  <div class="mb-3">
     <%= f.label :condition, class: "form-label" %>
     <%= f.select :condition, options_for_select(["New - Never used before", "As new - In perfect conditions", "Good state - Well preserved", "Acceptable - Worth the price", "Very used - Deteriorated but functional", ]), {}, { class: "form-control" } %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :price_per_day, class: "form-label" %>
+    <%= f.number_field :price_per_day, class: "form-control", step: "0.01" %>
   </div>
 
   <%= f.submit "Upload Product", class: "btn btn-primary" %>

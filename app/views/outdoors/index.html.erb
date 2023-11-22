@@ -1,0 +1,13 @@
+<section id="content">
+<h1>Outdoor</h1>
+
+<% @products.each do |product| %>
+  <div>
+    <%= image_tag product.image if product.image.attached? %>
+    <h2><%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %></h2>
+    <h2><%= product.title %></h2>
+    <h2><%= product.description %></h2>
+    <h2><%= product.condition %></h2>
+  </div>
+<% end %>
+</section>

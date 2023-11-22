@@ -1,67 +1,115 @@
-/* app/assets/stylesheets/products.css */
 .product-show-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-}
-
-.navbar {
-  background-color: #f8f9fa; /* Example color for the navbar */
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.product-header {
+  background: #f4f4f4;
+  padding: 2rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
+  justify-content: center;
 
-.profile-info {
-  display: flex;
-  align-items: center;
-}
+  .product-card {
+    display: flex;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
 
-.profile-image {
-  border-radius: 50%;
-  width: 50px; /* Example size, adjust as needed */
-  height: 50px;
-  margin-right: 10px;
-}
+    .product-image-wrapper {
+      flex-basis: 70%;
+      max-width: 70%;
+      height: 500px;
 
-.profile-name {
-  font-weight: bold;
-}
+      .product-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
 
-.product-interactions button {
-  margin-left: 10px;
-}
 
-.product-image-wrapper {
-  margin-bottom: 20px;
-}
+    .product-details {
+      flex: 1;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-.product-image {
-  width: 100%; /* Make the image responsive */
-}
+      .rent-button-wrapper {
+        .btn-rent-now {
+          background-color: #5cdb95; // This is a placeholder color, adjust it to match your specific color
+          color: #ffffff; // This is a placeholder text color, adjust it to match your specific color
+          padding: 10px 20px;
+          border: none;
+          border-radius: 20px;
+          font-size: 16px;
+          font-weight: bold;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
 
-.product-details {
-  display: grid;
-  grid-template-columns: 1fr 2fr; /* Adjust the ratio as needed */
-  gap: 20px;
-}
+          &:hover {
+            background-color: darken($color: #5cdb95, $amount: 10%); // Darken the button on hover
+          }
 
-.product-info-wrapper {
-  border: 1px solid #dee2e6; /* Example border color */
-  padding: 20px;
-}
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(93, 219, 149, 0.5); // A light glow effect that matches the button color
+          }
 
-.product-description-wrapper {
-  grid-column: span 2; /* Make the description span across both columns */
-}
+          &:active {
+            background-color: darken($color: #5cdb95, $amount: 15%); // Even darker when the button is clicked
+          }
+        }
+      }
 
-.product-description {
-  border: 1px solid #dee2e6; /* Example border color */
-  padding: 20px;
+
+      .product-interactions {
+        self-align: end;
+        button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          margin-left: 0.5rem;
+
+          &.btn-favorite {
+            color: #ff3b3b;
+          }
+
+          &.btn-chat {
+            color: #333;
+          }
+        }
+      }
+
+      .product-info {
+        .product-price {
+          font-size: 1.25rem;
+          color: #333;
+          display: block;
+        }
+
+        .product-title {
+          font-size: 1.5rem;
+          color: #333;
+          margin: 0.5rem 0;
+        }
+
+        .product-condition,
+        .product-category {
+          font-size: 1rem;
+          color: #666;
+          background: #e9ecef;
+          padding: 0.25rem 0.5rem;
+          border-radius: 0.25rem;
+          display: inline-block;
+          margin-right: 0.5rem;
+        }
+
+        .product-description {
+          font-size: 1rem;
+          color: #666;
+          line-height: 1.5;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
 }

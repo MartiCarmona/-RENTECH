@@ -1,21 +1,25 @@
-<section id=content>
-  <section id="content" class="product-show-container">
-    <div class="product-header">
-
+<section id="content" class="product-show-container">
+  <div class="product-card">
     <div class="product-image-wrapper">
       <%= image_tag(@product.image, class: 'product-image') if @product.image.attached? %>
     </div>
 
     <div class="product-details">
-      <div class="product-info-wrapper">
-        <span class="product-price"><%= number_to_currency(@product.price_per_day, unit: '€') %>/day</span>
+      <div class="product-interactions">
+        <button class="btn-chat">Chat</button>
+      </div>
+
+      <div class="rent-button-wrapper">
+        <button class="btn-rent-now">Rent now!</button>
+      </div>
+
+      <div class="product-info">
+        <span class="product-price"><%= number_to_currency(@product.price_per_day, unit: '€') %></span>
         <h1 class="product-title"><%= @product.title %></h1>
         <span class="product-condition"><%= @product.condition %></span>
         <span class="product-category"><%= @product.category %></span>
-      </div>
-      <div class="product-description-wrapper">
         <p class="product-description"><%= @product.description %></p>
       </div>
     </div>
-  </section>
+  </div>
 </section>

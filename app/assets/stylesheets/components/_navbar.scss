@@ -20,9 +20,11 @@ body, html {
   border-bottom: 1px solid #e6e6e6;
 }
 
-.navbar .navbar-nav .nav-item {
-  display: flex;
-  align-items: center; /* Align items vertically in the center */
+
+.nav-icon {
+  height: 25px;
+  width: auto;
+  margin-right: 0.5rem;
 }
 
 .container-fluid {
@@ -91,7 +93,6 @@ body, html {
 .navbar-tech-categories {
   background: white;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  /* align-items: center; */
   position: fixed;
   top: 67px;
   width: 100%;
@@ -111,5 +112,4 @@ body, html {
   font-weight: bold;
   padding: 0.5rem 0.75rem;
   font-size: 0.8rem;
-  /* margin: 0.25rem 0; */
 }

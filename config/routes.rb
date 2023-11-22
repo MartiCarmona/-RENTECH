@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   # Resources for products
   resources :products do
-    resources :bookings, only: [:create, :new] # Nested bookings within products for creating them
+    resources :bookings, only: [:create, :new, :show] # Nested bookings within products for creating them
   end
 
   get '/consoles', to: 'consoles#index'

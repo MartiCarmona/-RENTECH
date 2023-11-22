@@ -1,13 +1,21 @@
-<section id="content">
-<h1>Consoles</h1>
-<% @products.each do |product| %>
-  <div>
-    <%= image_tag product.image if product.image.attached? %>
-    <h2><%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %></h2>
-    <h2><%= product.title %></h2>
-    <h2><%= product.description %></h2>
-    <h2><%= product.category %></h2>
-    <h2><%= product.condition %></h2>
+<section id="content" class="container">
+
+
+<h2 class="my-4"><strong>Consoles</strong></h2>
+
+  <div class="products-grid">
+    <% @products.first(5).each do |product| %>
+      <%= link_to product_path(product), class: 'product-link' do %>
+        <div class="product-card">
+          <%= image_tag(product.image, class: 'product-image') if product.image.attached? %>
+          <div class="product-info">
+            <span class="price">€<%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %></span>
+            <p class="title"><%= product.title %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
-<% end %>
+
+
 </section>

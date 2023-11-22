@@ -9,8 +9,9 @@
       </div>
 
       <div class="rent-button-wrapper">
-        <button class="btn-rent-now">Rent now!</button>
+        <%= link_to 'Rent now!', new_user_session_path, class: 'btn-rent-now' %>
       </div>
+
 
       <div class="product-info">
         <span class="product-price"><%= number_to_currency(@product.price_per_day, unit: '€') %></span>

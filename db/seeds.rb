@@ -297,6 +297,7 @@ movies.each do |movie|
     description: movie[:description],
     price_per_day: movie[:price_per_day],
     condition: movie[:condition],
+    category: movie[:category],
     user: User.last
   )
   product.image.attach(io: file, filename: "#{movie[:title].parameterize.underscore}.jpg", content_type: "image/jpg")

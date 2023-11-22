@@ -12,11 +12,17 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <input type="text" class="form-control search-bar" placeholder="Search for items">
-
           <li class="nav-item active">
             <%= link_to "Upload Product", new_product_path, class: "nav-link" %>
+          <li class="nav-item active">
+            <%= link_to "#", class: "nav-link" do %>
+              <%= image_tag "heart.png", class: "nav-icon" %>
+            <% end %>
+          </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to "#", class: "nav-link" do %>
+              <%= image_tag "mail-inbox-app.png", class: "nav-icon" %>
+            <% end %>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

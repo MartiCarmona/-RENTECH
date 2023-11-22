@@ -1,21 +1,18 @@
 <section id="content" class="container">
 
-  <h1 class="text-center my-4">Welcome to the Home Page</h1>
+<h1 class="my-4">Welcome to the Home Page</h1>
 
-  <div class="products-grid">
-    <% @products.each do |product| %>
-      <a href="<%= product_path(product) %>" class="product-button"> <!-- Adjust the path as needed -->
-        <div class="product-card">
-          <%= image_tag(product.image, class: 'product-image') if product.image.attached? %>
-          <div class="product-info">
-            <span class="price">€<%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %></span>
-            <p class="title"><%= product.title %></p>
-          </div>
-        </div>
-      </a>
-    <% end %>
-  </div>
-
+<div class="products-grid">
+  <% @products.each do |product| %>
+    <div class="product-card">
+      <%= image_tag(product.image, class: 'product-image') if product.image.attached? %>
+      <div class="product-info">
+        <span class="price">€<%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %></span>
+        <p class="title"><%= product.title %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>">
       <%= value %>

@@ -1,0 +1,9 @@
+<section id="content">
+  <%= image_tag(@product.image, class: 'product-image') if @product.image.attached? %>
+  <h1><%= @product.price_per_day %></h2>
+  <h2><%= @product.title %></h2>
+  <h3><%= @product.condition %></h3>
+  <h4><%= @product.description %></h3>
+  <h4><%= @product.category %></h3>
+      <!-- Add more details as needed -->
+</section>

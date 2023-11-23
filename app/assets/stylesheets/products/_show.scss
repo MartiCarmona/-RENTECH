@@ -9,32 +9,37 @@
     background: #fff;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    width: 2000px;
+    width: 1400px;
+    max-width: 100%;
     height: 585px;
 
     .product-image-wrapper {
-      flex-basis: 70%;
+      // flex-basis: 70%;
       max-width: 70%;
-      height: 500px;
+      height: 585px;
+      width: 700px;
 
       .product-image {
-        width: 100%;
-        height: 100%;
         object-fit: cover;
+        width: 700px;
+        width: 100%; /* Adjusted to cover the entire container */
+        height: 100%;
+        object-position: center;
       }
     }
-    
+
+
     .product-details {
-      flex: 1;
+      flex: 4;
       padding: 1rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      width: auto;
 
       .rent-button-wrapper {
         .btn-rent-now {
-          background-color: #5cdb95; // This is a placeholder color, adjust it to match your specific color
+          background-color: #01C1AD; // This is a placeholder color, adjust it to match your specific color
           color: #ffffff; // This is a placeholder text color, adjust it to match your specific color
           padding: 10px 20px;
           border: none;
@@ -45,9 +50,10 @@
           cursor: pointer;
           transition: background-color 0.3s ease;
           text-decoration: none;
+          object-position: center;
 
           &:hover {
-            background-color: darken($color: #5cdb95, $amount: 10%); // Darken the button on hover
+            background-color: darken($color: #007883, $amount: 10%); // Darken the button on hover
           }
 
           &:focus {
@@ -81,6 +87,7 @@
       }
 
       .product-info {
+        padding: 10px;
         .product-price {
           font-size: 1.25rem;
           color: #333;

@@ -10,10 +10,13 @@
 
       <div class="rent-button-wrapper">
         <% if user_signed_in? %>
-        <%= link_to 'Rent now!', rent_product_path(@product), method: :get, class: 'btn-rent-now' %>
+        <% if current_user.products.exclude?(@product)%>
+         <%= button_to 'Rent now!', product_rentals_path(@product), class: 'btn-rent-now' %>
+          <% end %>
         <% else %>
           <%= link_to 'Rent now!', new_user_session_path, class: 'btn-rent-now' %>
         <% end %>
+
       </div>
 
       <div class="product-info">

@@ -49,19 +49,19 @@
   <div class="container-fluid">
     <ul class="navbar-nav me-auto">
       <li class="nav-item">
-        <%= link_to "Consoles", consoles_path, class: "nav-link" %>
+        <%= link_to "Consoles", products_path({ category: "consoles" }), class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Audio", audios_path, class: "nav-link" %>
+        <%= link_to "Audio", products_path({ category: "audio" }), class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Cameras", cameras_path, class: "nav-link" %>
+        <%= link_to "Cameras", products_path({ category: "cameras" }), class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Outdoor", outdoors_path, class: "nav-link" %>
+        <%= link_to "Outdoor", products_path({ category: "outdoor" }), class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Gadgets", gadgets_path, class: "nav-link" %>
+        <%= link_to "Gadgets", products_path({ category: "gadgets" }), class: "nav-link" %>
       </li>
     </ul>
   </div>

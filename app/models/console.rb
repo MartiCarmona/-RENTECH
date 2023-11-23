@@ -1,2 +1,0 @@
-class Console < ApplicationRecord
-end

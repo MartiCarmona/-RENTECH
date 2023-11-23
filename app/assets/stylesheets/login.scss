@@ -8,7 +8,6 @@
   .info h1{
     font-size: 25px;
     font-weight: bold;
-    margin-left: 46px;
     margin-top: 36px;
   }
 
@@ -22,6 +21,7 @@
     color: #333;
     font-size: 28px;
     margin-bottom: 20px;
+    margin-left: 200px;
   }
 
   form {
@@ -53,9 +53,8 @@
         text-align: center;
       }
 
-
-      .btn-primary {
-        background-color: #01C1AD;
+      .btn-primary,
+      .signup-btn {
         color: #fff;
         padding: 10px 20px;
         border: none;
@@ -66,8 +65,24 @@
         margin-bottom: 2rem;
       }
 
+      .btn-primary {
+        background-color: #01C1AD;
+      }
+
+      .signup-btn {
+        background-color: rgb(200, 200, 200) !important; /* Adding !important to ensure the color is applied */
+      }
+
       .btn-primary:hover {
         background-color: #007883;
+      }
+
+      .signup-btn:hover {
+        background-color: rgb(127, 127, 127) !important;
+      }
+
+      .forgot {
+        margin-left: 25px;
       }
     }
 

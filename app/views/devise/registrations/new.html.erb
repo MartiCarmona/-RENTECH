@@ -39,10 +39,13 @@
     </div>
 
     <div class="upload-button">
-      <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
+      <div class="horizontal-buttons" style="margin-top: 2rem;">
+        <%= link_to "Log in", new_session_path(resource_name), class: "btn btn-primary signup-btn" %><br />
+        <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
+      </div>
     </div>
     <% end %>
 
-  <%= render "devise/shared/links" %>
+  <%# <%= render "devise/shared/links" %>
   </div>
 </section>

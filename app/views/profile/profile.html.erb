@@ -20,9 +20,8 @@
   </div>
 
 <h2 class="my-4"><strong>Your rents</strong></h2>
-
-  <% @rented_products.each do |rented_product| %>
-    <div class="products-grid">
+  <div class="products-grid mb-4">
+    <% @rented_products.each do |rented_product| %>
           <%= link_to product_path(rented_product), class: 'product-link' do %>
             <div class="product-card">
               <%= image_tag(rented_product.image, class: 'product-image') if rented_product.image.attached? %>

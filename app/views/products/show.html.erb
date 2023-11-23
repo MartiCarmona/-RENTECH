@@ -23,7 +23,7 @@
         <span class="product-price"><%= number_to_currency(@product.price_per_day, unit: '€') %></span>
         <h1 class="product-title"><%= @product.title %></h1>
         <span class="product-condition"><%= @product.condition %></span>
-        <span class="product-category"><%= @product.category %></span>
+        <span class="product-category"><%= @product.category.camelcase %></span>
         <p class="product-description"><%= @product.description %></p>
       </div>
     </div>

@@ -67,6 +67,12 @@ body, html {
   flex: 1;
 }
 
+.search-bar-container{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-right: 0.3rem;
+}
 .avatar {
   width: 30px;
   height: 30px;

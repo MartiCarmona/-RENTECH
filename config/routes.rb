@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   resources :products do
     resources :bookings, only: [:create, :new, :show]
     resources :rentals, only: [:create]
+    resources :categories, only: [:index]
+
+    collection do
+      get 'search'
+    end
   end
 
   # Separate resources for bookings to handle other actions

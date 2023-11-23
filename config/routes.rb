@@ -1,19 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root to: 'pages#home'
+  # Define root path (you can change the controller#action as needed)
+  root to: 'products#index'
 
   resources :products do
     resources :bookings, only: [:create, :new, :show]
     resources :rentals, only: [:create]
   end
 
-  get '/consoles', to: 'consoles#index'
-  get '/audios', to: 'audios#index'
-  get '/cameras', to: 'cameras#index'
-  get '/outdoors', to: 'outdoors#index'
-  get '/gadgets', to: 'gadgets#index'
-
+  # Separate resources for bookings to handle other actions
   resources :bookings, only: [] do
     member do
       patch 'accept'

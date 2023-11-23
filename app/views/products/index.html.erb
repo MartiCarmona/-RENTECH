@@ -4,6 +4,10 @@
   <h2 class="my-4"><strong>Recently Seen:</strong></h2>
 <% end %>
 
+<% if params[:category].present? %>
+  <h2 class="my-4"><strong> <%= params[:category].camelcase %></strong></h2>
+<% end %>
+
   <div class="products-grid">
     <% @products.first(5).each do |product| %>
       <%= link_to product_path(product), class: 'product-link' do %>

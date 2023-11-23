@@ -165,7 +165,7 @@ products = [
     description: 'Powerful and lightweight laptop for productivity on the go.',
     price_per_day: 24.99,
     condition: 'Like New',
-    category: 'gadgets',
+    category: 'consoles',
     image_url: 'https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/11/PS5-Review-8-1024x768.jpg'
   },
   {
@@ -173,7 +173,7 @@ products = [
     description: 'Experience the future with these cutting-edge AR glasses.',
     price_per_day: 49.99,
     condition: 'Excellent',
-    category: 'gadgets',
+    category: 'consoles',
     image_url: 'https://www.apple.com/v/apple-vision-pro/b/images/overview/visionos/drawer/voice_startframe__c0a4vcs48m0y_large.jpg'
   },
   {
@@ -181,7 +181,7 @@ products = [
     description: 'Capture stunning aerial footage with this advanced drone.',
     price_per_day: 39.99,
     condition: 'Good',
-    category: 'gadgets',
+    category: 'consoles',
     image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
   },
   {
@@ -205,7 +205,7 @@ products = [
     description: 'Stay connected with the latest smartwatch on the market.',
     price_per_day: 12.99,
     condition: 'New',
-    category: 'gadgets',
+    category: 'consoles',
     image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
   },
   {
@@ -221,7 +221,7 @@ products = [
     description: 'Experience the future with these cutting-edge AR glasses.',
     price_per_day: 49.99,
     condition: 'Excellent',
-    category: 'gadgets',
+    category: 'outdoor',
     image_url: 'https://www.apple.com/v/apple-vision-pro/b/images/overview/visionos/drawer/voice_startframe__c0a4vcs48m0y_large.jpg'
   },
   {
@@ -229,7 +229,7 @@ products = [
     description: 'Capture stunning aerial footage with this advanced drone.',
     price_per_day: 39.99,
     condition: 'Good',
-    category: 'gadgets',
+    category: 'audio',
     image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
   },
   {
@@ -253,7 +253,7 @@ products = [
     description: 'Stay connected with the latest smartwatch on the market.',
     price_per_day: 12.99,
     condition: 'New',
-    category: 'gadgets',
+    category: 'audio',
     image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
   },
   {
@@ -261,7 +261,7 @@ products = [
     description: 'Powerful and lightweight laptop for productivity on the go.',
     price_per_day: 24.99,
     condition: 'Like New',
-    category: 'gadgets',
+    category: 'audio',
     image_url: 'https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/11/PS5-Review-8-1024x768.jpg'
   },
   {
@@ -269,7 +269,7 @@ products = [
     description: 'Experience the future with these cutting-edge AR glasses.',
     price_per_day: 49.99,
     condition: 'Excellent',
-    category: 'gadgets',
+    category: 'audio',
     image_url: 'https://www.apple.com/v/apple-vision-pro/b/images/overview/visionos/drawer/voice_startframe__c0a4vcs48m0y_large.jpg'
   },
   {
@@ -277,7 +277,7 @@ products = [
     description: 'Capture stunning aerial footage with this advanced drone.',
     price_per_day: 39.99,
     condition: 'Good',
-    category: 'gadgets',
+    category: 'audio',
     image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
   },
   {
@@ -301,7 +301,7 @@ products = [
     description: 'Stay connected with the latest smartwatch on the market.',
     price_per_day: 12.99,
     condition: 'New',
-    category: 'gadgets',
+    category: 'consoles',
     image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
   },
   {
@@ -309,7 +309,7 @@ products = [
     description: 'Powerful and lightweight laptop for productivity on the go.',
     price_per_day: 24.99,
     condition: 'Like New',
-    category: 'gadgets',
+    category: 'consoles',
     image_url: 'https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/11/PS5-Review-8-1024x768.jpg'
   },
   {
@@ -317,7 +317,7 @@ products = [
     description: 'Experience the future with these cutting-edge AR glasses.',
     price_per_day: 49.99,
     condition: 'Excellent',
-    category: 'gadgets',
+    category: 'consoles',
     image_url: 'https://www.apple.com/v/apple-vision-pro/b/images/overview/visionos/drawer/voice_startframe__c0a4vcs48m0y_large.jpg'
   },
   {
@@ -325,7 +325,7 @@ products = [
     description: 'Capture stunning aerial footage with this advanced drone.',
     price_per_day: 39.99,
     condition: 'Good',
-    category: 'gadgets',
+    category: 'consoles',
     image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
   },
   {

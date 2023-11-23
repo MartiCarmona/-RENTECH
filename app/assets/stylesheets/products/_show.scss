@@ -10,7 +10,8 @@
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 900px;
+    width: 2000px;
+    height: 585px;
 
     .product-image-wrapper {
       flex-basis: 70%;
@@ -23,8 +24,7 @@
         object-fit: cover;
       }
     }
-
-
+    
     .product-details {
       flex: 1;
       padding: 1rem;

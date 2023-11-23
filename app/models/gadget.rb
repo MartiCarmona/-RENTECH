@@ -1,2 +1,0 @@
-class Gadget < ApplicationRecord
-end

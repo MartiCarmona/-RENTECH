@@ -3,18 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
 
   # Define root path (you can change the controller#action as needed)
-  root to: 'pages#home'
+  root to: 'products#index'
 
   # Resources for products
   resources :products do
     resources :bookings, only: [:create, :new, :show] # Nested bookings within products for creating them
   end
-
-  get '/consoles', to: 'consoles#index'
-  get '/audios', to: 'audios#index'
-  get '/cameras', to: 'cameras#index'
-  get '/outdoors', to: 'outdoors#index'
-  get '/gadgets', to: 'gadgets#index'
 
   # Separate resources for bookings to handle other actions
   resources :bookings, only: [] do

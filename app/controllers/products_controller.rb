@@ -4,7 +4,12 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @products = Product.all
+    # raise
+    if params[:category].present?
+      @products = Product.where(category: params[:category])
+    else
+      @products = Product.all
+    end
   end
 
   def show

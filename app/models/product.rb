@@ -2,10 +2,12 @@ class Product < ApplicationRecord
   belongs_to :user
   has_many :bookings
   has_one_attached :image
+  has_many :rentals
+  has_many :rented_by, through: :rentals, source: :user
 
   validate :image_format
 
-  private
+
 
   def image_format
     return unless image.attached?

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :products do
     resources :bookings, only: [:create, :new, :show]
-    get 'rent', to: 'rentals#create', on: :member
+    resources :rentals, only: [:create]
   end
 
   get '/consoles', to: 'consoles#index'

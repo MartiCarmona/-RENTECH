@@ -9,7 +9,8 @@
     .info h1{
       font-size: 25px;
       font-weight: bold;
-      margin: 20px;
+      margin-left: 23px;
+      margin-bottom: 1rem;
     }
 
     .form-container{
@@ -22,6 +23,7 @@
       display: flex;
       flex-wrap: wrap; /* Allow wrapping to the next line if needed */
       margin-bottom: 1rem; /* Add some spacing between the form groups */
+      margin-top: 3rem;
     }
 
     .form-group {
@@ -60,9 +62,7 @@
 
 
       .mb-3 {
-        margin-top: 2rem;
         margin-bottom: 2rem;
-        margin: 1.5rem
       }
 
       .form-label {

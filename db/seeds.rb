@@ -13,7 +13,7 @@ products = [
     description: 'Stay connected with the latest smartwatch on the market.',
     price_per_day: 12.99,
     condition: 'New',
-    category: 'gadgets',
+    category: 'Gadgets',
     image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
   },
   {

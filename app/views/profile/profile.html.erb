@@ -1,5 +1,38 @@
-<!-- app/views/users/show.html.erb -->
-<section id= content>
-<h1>User Profile</h1>
+<!-- app/views/profile/profile.html.erb -->
+<section id="content">
+<h2 class="my-4"><strong>My Profile</strong></h2>
+  <br>
+  <h2 class="my-4"><strong>My Products</strong></h2>
 
+  <div class="products-grid">
+    <% @products.each do |product| %>
+        <%= link_to product_path(product), class: 'product-link' do %>
+          <div class="product-card">
+            <%= image_tag(product.image, class: 'product-image') if product.image.attached? %>
+            <div class="product-info">
+              <span class="price">€<%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %></span>
+              <p class="title"><%= product.title %></p>
+              <!-- Add more information here as needed -->
+            </div>
+          </div>
+        <% end %>
+    <% end %>
+  </div>
+
+<h2 class="my-4"><strong>Your rents</strong></h2>
+
+  <% @rented_products.each do |rented_product| %>
+    <div class="products-grid">
+          <%= link_to product_path(rented_product), class: 'product-link' do %>
+            <div class="product-card">
+              <%= image_tag(rented_product.image, class: 'product-image') if rented_product.image.attached? %>
+              <div class="product-info">
+                <span class="price">€<%= rented_product.price_per_day.to_i == rented_product.price_per_day ? rented_product.price_per_day.to_i : rented_product.price_per_day %></span>
+                <p class="title"><%= rented_product.title %></p>
+                <!-- Add more information here as needed -->
+              </div>
+            </div>
+          <% end %>
+      <% end %>
+    </div>
 </section>

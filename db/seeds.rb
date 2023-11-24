@@ -41,7 +41,7 @@ products = [
     image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
   },
   {
-    title: 'GoPro Hero 14',
+    title: 'GoPro Hero 10',
     description: 'Shoot high-quality videos and photos with crystal-clear detail.',
     price_per_day: 18.99,
     condition: 'Excellent',
@@ -49,7 +49,7 @@ products = [
     image_url: 'https://i.blogs.es/b44142/gopro-hero-10-black-2-/450_1000.jpg'
   },
   {
-    title: 'Canon xA60 8K',
+    title: 'Canon xA60 4K',
     description: 'Charge your devices effortlessly with this wireless charging pad.',
     price_per_day: 9.99,
     condition: 'New',

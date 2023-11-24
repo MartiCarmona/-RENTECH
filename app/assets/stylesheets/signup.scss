@@ -22,6 +22,8 @@
     display: flex;
     flex-wrap: wrap; /* Allow wrapping to the next line if needed */
     margin-bottom: -2rem;
+    margin-top: -200px;
+    height: 85px;
 
   }
 
@@ -40,7 +42,7 @@
   h1 {
     color: #333;
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: -260px;
   }
 
   form {
@@ -66,13 +68,24 @@
         background-color: white;
       }
 
+      .horizontal-buttons {
+        display: flex; /* Use flexbox layout */
+        flex-direction: row; /* Arrange items horizontally */
+        justify-content: center;
+        margin-top: 1rem;
+      }
+
+      .horizontal-buttons a,
+      .horizontal-buttons button {
+        margin-right: 5px; /* Adjust the margin as needed for separation */
+      }
+
       .upload-button {
         text-align: center;
       }
 
-
-      .btn-primary {
-        background-color: #01C1AD;
+      .btn-primary,
+      .signup-btn {
         color: #fff;
         padding: 10px 20px;
         border: none;
@@ -83,9 +96,22 @@
         margin-bottom: 2rem;
       }
 
+      .btn-primary {
+        background-color: #01C1AD;
+      }
+
+      .signup-btn {
+        background-color: rgb(200, 200, 200) !important; /* Adding !important to ensure the color is applied */
+      }
+
       .btn-primary:hover {
         background-color: #007883;
       }
+
+      .signup-btn:hover {
+        background-color: rgb(127, 127, 127) !important;
+      }
+
     }
 
 }

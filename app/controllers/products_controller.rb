@@ -13,6 +13,7 @@ end
 
   def show
     @product = Product.find(params[:id])
+
   end
 
   def new
@@ -34,6 +35,12 @@ end
   def search
     @products = Product.search(params[:search])
     render 'index'
+  end
+
+  def toggle_favorite
+    @product = Product.find(params[:id])
+    current_user.toggle_favorite(@product)
+    redirect_to product_path(@product), notice: 'Product marked as favorite successfully.'
   end
 
   private

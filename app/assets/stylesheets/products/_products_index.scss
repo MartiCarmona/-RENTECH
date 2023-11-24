@@ -10,6 +10,10 @@
   color: rgb(93, 93, 93);
 }
 
+.my-4 {
+  color: #333;
+}
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -34,25 +38,28 @@
   }
 
   .product-info {
-    // padding: 0.5rem;
     background-color: #f9f9f9;
     text-decoration: none;
     .price {
       color: #007883;
       font-weight: bold;
-      display: block;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin: 0.5rem;
+
+      .product-icon-filled{
+        color: #007883;
+        size: 10px;
+      }
     }
 
     .title, .description {
       margin: 0.5rem;
     }
+
   }
 }
-
-// .text-center {
-//   text-align: center;
-// }
 
 .my-4 {
   margin-top: 0.3rem;

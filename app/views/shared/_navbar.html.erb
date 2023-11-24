@@ -1,8 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-  <%= image_tag "RENTech.png" %>
-<% end %>
+      <%= image_tag "RENTech.png" %>
+    <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,23 +11,29 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <input type="text" class="form-control search-bar" placeholder="Search for items">
+
+        <form action="<%= products_path %>" method="get" class="search-bar-container">
+            <input type="text" class="form-control search-bar" placeholder="Search for items" name="search">
+        </form>
+
           <li class="nav-item active">
-            <%= link_to "Upload Product", new_product_path, class: "nav-link" %>
+            <%= link_to "Upload Product", new_product_path, class: "nav-link btn-upload" %>
           <li class="nav-item active">
-            <%= link_to "#", class: "nav-link" do %>
-              <%= image_tag "heart.png", class: "nav-icon" %>
+            <%= link_to "favorites/index", class: "nav-link" do %>
+              <%= image_tag "like.png", class: "nav-icon" %>
             <% end %>
           </li>
           <li class="nav-item">
             <%= link_to "#", class: "nav-link" do %>
-              <%= image_tag "mail-inbox-app.png", class: "nav-icon" %>
+              <%= image_tag "mail.png", class: "nav-icon-2" %>
             <% end %>
+
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= image_tag "profile.svg.png", class: "avatar", alt: "dropdown menu" %>
+              <%= image_tag "joseluis.svg.png", class: "avatar", alt: "dropdown menu" %>
             </a>
+
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
              <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
@@ -35,7 +41,11 @@
             </div>
           </li>
         <% else %>
-        <input type="text" class="form-control search-bar" placeholder="Search for items">
+
+         <form action="<%= products_path %>" method="get" class="search-bar-container">
+            <input type="text" class="form-control search-bar" placeholder="Search for items" name="search">
+          </form>
+
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
@@ -49,19 +59,19 @@
   <div class="container-fluid">
     <ul class="navbar-nav me-auto">
       <li class="nav-item">
-        <%= link_to "Consoles", products_path({ category: "consoles" }), class: "nav-link" %>
+        <%= link_to "Consoles", products_path({ category: "Consoles" }), class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Audio", products_path({ category: "audio" }), class: "nav-link" %>
+        <%= link_to "Audio", products_path({ category: "Audio" }), class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Cameras", products_path({ category: "cameras" }), class: "nav-link" %>
+        <%= link_to "Cameras", products_path({ category: "Cameras" }), class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Outdoor", products_path({ category: "outdoor" }), class: "nav-link" %>
+        <%= link_to "Outdoor", products_path({ category: "Outdoor" }), class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Gadgets", products_path({ category: "gadgets" }), class: "nav-link" %>
+        <%= link_to "Gadgets", products_path({ category: "Gadgets" }), class: "nav-link" %>
       </li>
     </ul>
   </div>

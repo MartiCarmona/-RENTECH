@@ -1,37 +1,78 @@
-<!-- app/views/profile/profile.html.erb -->
 <section id="content">
-<h2 class="my-4"><strong>My Profile</strong></h2>
-  <br>
-  <h2 class="my-4"><strong>My Products</strong></h2>
+  <div class="profile-section">
+    <div class="profile-header">
+      <div class="profile-picture">
+        <%= image_tag("joseluis.svg.png", class: "profile-image") %>
+      </div>
+      <div class="profile-details">
+        <div class="profile-name-email">
+          <h2 class="profile-name"><%= "#{current_user.first_name} #{current_user.last_name}" %></h2>
+          <p class="profile-email"><%= current_user.email %></p>
+        </div>
+        <div class="profile-actions">
+          <%= link_to "Edit Profile", edit_user_registration_path, class: 'btn btn-outline-secondary' %>
+        </div>
+      </div>
+    </div>
 
-  <div class="products-grid">
-    <% @products.each do |product| %>
-        <%= link_to product_path(product), class: 'product-link' do %>
-          <div class="product-card">
-            <%= image_tag(product.image, class: 'product-image') if product.image.attached? %>
-            <div class="product-info">
-              <span class="price">€<%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %></span>
-              <p class="title"><%= product.title %></p>
-              <!-- Add more information here as needed -->
+    <div class="tab-buttons">
+      <button id="btn-products" class="tab-btn active">My Products</button>
+      <button id="btn-rents" class="tab-btn">Your Rents</button>
+    </div>
+
+    <div id="products" class="tab-content active">
+      <div class="products-grid">
+        <% @products.each do |product| %>
+          <%= link_to product_path(product), class: 'product-link' do %>
+            <div class="product-card">
+              <%= image_tag(product.image, class: 'product-image') if product.image.attached? %>
+              <div class="product-info">
+                <span class="price">€<%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %></span>
+                <p class="title"><%= product.title %></p>
+              </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
-    <% end %>
-  </div>
+      </div>
+    </div>
 
-<h2 class="my-4"><strong>Your rents</strong></h2>
-  <div class="products-grid mb-4">
-    <% @rented_products.each do |rented_product| %>
+    <div id="rents" class="tab-content">
+      <div class="products-grid">
+        <% @rented_products.each do |rented_product| %>
           <%= link_to product_path(rented_product), class: 'product-link' do %>
             <div class="product-card">
               <%= image_tag(rented_product.image, class: 'product-image') if rented_product.image.attached? %>
               <div class="product-info">
                 <span class="price">€<%= rented_product.price_per_day.to_i == rented_product.price_per_day ? rented_product.price_per_day.to_i : rented_product.price_per_day %></span>
                 <p class="title"><%= rented_product.title %></p>
-                <!-- Add more information here as needed -->
               </div>
             </div>
           <% end %>
-      <% end %>
+        <% end %>
+      </div>
     </div>
+  </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btnProducts = document.getElementById('btn-products');
+    const btnRents = document.getElementById('btn-rents');
+    const productsContent = document.getElementById('products');
+    const rentsContent = document.getElementById('rents');
+
+    btnProducts.addEventListener('click', function() {
+      productsContent.classList.add('active');
+      rentsContent.classList.remove('active');
+      btnProducts.classList.add('active');
+      btnRents.classList.remove('active');
+    });
+
+    btnRents.addEventListener('click', function() {
+      rentsContent.classList.add('active');
+      productsContent.classList.remove('active');
+      btnRents.classList.add('active');
+      btnProducts.classList.remove('active');
+    });
+  });
+</script>

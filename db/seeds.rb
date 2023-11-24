@@ -21,6 +21,150 @@ products = [
     description: 'Powerful and lightweight laptop for productivity on the go.',
     price_per_day: 24.99,
     condition: 'Like New',
+    category: 'Gadgets',
+    image_url: 'https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/11/PS5-Review-8-1024x768.jpg'
+  },
+  {
+    title: 'VR Glasses',
+    description: 'Experience the future with these cutting-edge AR glasses.',
+    price_per_day: 49.99,
+    condition: 'Excellent',
+    category: 'Gadgets',
+    image_url: 'https://www.apple.com/v/apple-vision-pro/b/images/overview/visionos/drawer/voice_startframe__c0a4vcs48m0y_large.jpg'
+  },
+  {
+    title: 'Drone DJI Mini 3',
+    description: 'Capture stunning aerial footage with this advanced drone.',
+    price_per_day: 39.99,
+    condition: 'Good',
+    category: 'Gadgets',
+    image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
+  },
+  {
+    title: 'GoPro Hero 10',
+    description: 'Shoot high-quality videos and photos with crystal-clear detail.',
+    price_per_day: 18.99,
+    condition: 'Excellent',
+    category: 'Cameras',
+    image_url: 'https://i.blogs.es/b44142/gopro-hero-10-black-2-/450_1000.jpg'
+  },
+  {
+    title: 'Canon xA60 4K',
+    description: 'Charge your devices effortlessly with this wireless charging pad.',
+    price_per_day: 9.99,
+    condition: 'New',
+    category: 'Cameras',
+    image_url: 'https://thumb.pccomponentes.com/w-530-530/articles/1064/10649216/135-canon-xa60-videocamara-profesional-ultrahd-4k-20x.jpg'
+  },
+  {
+    title: 'Smartwatch X',
+    description: 'Stay connected with the latest smartwatch on the market.',
+    price_per_day: 12.99,
+    condition: 'New',
+    category: 'Gadgets',
+    image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
+  },
+  {
+    title: 'Ultra-Slim Laptop',
+    description: 'Powerful and lightweight laptop for productivity on the go.',
+    price_per_day: 24.99,
+    condition: 'Like New',
+    category: 'Gadgets',
+    image_url: 'https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/11/PS5-Review-8-1024x768.jpg'
+  },
+  {
+    title: 'VR Glasses',
+    description: 'Experience the future with these cutting-edge AR glasses.',
+    price_per_day: 49.99,
+    condition: 'Excellent',
+    category: 'Gadgets',
+    image_url: 'https://www.apple.com/v/apple-vision-pro/b/images/overview/visionos/drawer/voice_startframe__c0a4vcs48m0y_large.jpg'
+  },
+  {
+    title: 'Drone DJI Mini 3',
+    description: 'Capture stunning aerial footage with this advanced drone.',
+    price_per_day: 39.99,
+    condition: 'Good',
+    category: 'Gadgets',
+    image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
+  },
+  {
+    title: 'GoPro Hero 10',
+    description: 'Shoot high-quality videos and photos with crystal-clear detail.',
+    price_per_day: 18.99,
+    condition: 'Excellent',
+    category: 'Cameras',
+    image_url: 'https://i.blogs.es/b44142/gopro-hero-10-black-2-/450_1000.jpg'
+  },
+  {
+    title: 'Canon xA60 4K',
+    description: 'Charge your devices effortlessly with this wireless charging pad.',
+    price_per_day: 9.99,
+    condition: 'New',
+    category: 'Cameras',
+    image_url: 'https://thumb.pccomponentes.com/w-530-530/articles/1064/10649216/135-canon-xa60-videocamara-profesional-ultrahd-4k-20x.jpg'
+  },
+  {
+    title: 'Smartwatch X',
+    description: 'Stay connected with the latest smartwatch on the market.',
+    price_per_day: 12.99,
+    condition: 'New',
+    category: 'Gadgets',
+    image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
+  },
+  {
+    title: 'Ultra-Slim Laptop',
+    description: 'Powerful and lightweight laptop for productivity on the go.',
+    price_per_day: 24.99,
+    condition: 'Like New',
+    category: 'Outdoor',
+    image_url: 'https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/11/PS5-Review-8-1024x768.jpg'
+  },
+  {
+    title: 'VR Glasses',
+    description: 'Experience the future with these cutting-edge AR glasses.',
+    price_per_day: 49.99,
+    condition: 'Excellent',
+    category: 'Outdoor',
+    image_url: 'https://www.apple.com/v/apple-vision-pro/b/images/overview/visionos/drawer/voice_startframe__c0a4vcs48m0y_large.jpg'
+  },
+  {
+    title: 'Drone DJI Mini 3',
+    description: 'Capture stunning aerial footage with this advanced drone.',
+    price_per_day: 39.99,
+    condition: 'Good',
+    category: 'Outdoor',
+    image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
+  },
+  {
+    title: 'GoPro Hero 10',
+    description: 'Shoot high-quality videos and photos with crystal-clear detail.',
+    price_per_day: 18.99,
+    condition: 'Excellent',
+    category: 'Outdoor',
+    image_url: 'https://i.blogs.es/b44142/gopro-hero-10-black-2-/450_1000.jpg'
+  },
+  {
+    title: 'Canon xA60 4K',
+    description: 'Charge your devices effortlessly with this wireless charging pad.',
+    price_per_day: 9.99,
+    condition: 'New',
+    category: 'Cameras',
+    image_url: 'https://thumb.pccomponentes.com/w-530-530/articles/1064/10649216/135-canon-xa60-videocamara-profesional-ultrahd-4k-20x.jpg'
+  },
+  {
+    title: 'Smartwatch X',
+    description: 'Stay connected with the latest smartwatch on the market.',
+    price_per_day: 12.99,
+    condition: 'New',
+    category: 'Gadgets',
+    image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
+  },
+  {
+    title: 'Ultra-Slim Laptop',
+    description: 'Powerful and lightweight laptop for productivity on the go.',
+    price_per_day: 24.99,
+    condition: 'Like New',
     category: 'Consoles',
     image_url: 'https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/11/PS5-Review-8-1024x768.jpg'
   },
@@ -37,103 +181,7 @@ products = [
     description: 'Capture stunning aerial footage with this advanced drone.',
     price_per_day: 39.99,
     condition: 'Good',
-    category: 'Cameras',
-    image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
-  },
-  {
-    title: 'GoPro Hero 10',
-    description: 'Shoot high-quality videos and photos with crystal-clear detail.',
-    price_per_day: 18.99,
-    condition: 'Excellent',
-    category: 'Cameras',
-    image_url: 'https://i.blogs.es/b44142/gopro-hero-10-black-2-/450_1000.jpg'
-  },
-  {
-    title: 'Canon xA60 4K',
-    description: 'Charge your devices effortlessly with this wireless charging pad.',
-    price_per_day: 9.99,
-    condition: 'New',
-    category: 'cameras',
-    image_url: 'https://thumb.pccomponentes.com/w-530-530/articles/1064/10649216/135-canon-xa60-videocamara-profesional-ultrahd-4k-20x.jpg'
-  },
-  {
-    title: 'Smartwatch X',
-    description: 'Stay connected with the latest smartwatch on the market.',
-    price_per_day: 12.99,
-    condition: 'New',
-    category: 'gadgets',
-    image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
-  },
-  {
-    title: 'Ultra-Slim Laptop',
-    description: 'Powerful and lightweight laptop for productivity on the go.',
-    price_per_day: 24.99,
-    condition: 'Like New',
-    category: 'gadgets',
-    image_url: 'https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/11/PS5-Review-8-1024x768.jpg'
-  },
-  {
-    title: 'VR Glasses',
-    description: 'Experience the future with these cutting-edge AR glasses.',
-    price_per_day: 49.99,
-    condition: 'Excellent',
-    category: 'gadgets',
-    image_url: 'https://www.apple.com/v/apple-vision-pro/b/images/overview/visionos/drawer/voice_startframe__c0a4vcs48m0y_large.jpg'
-  },
-  {
-    title: 'Drone DJI Mini 3',
-    description: 'Capture stunning aerial footage with this advanced drone.',
-    price_per_day: 39.99,
-    condition: 'Good',
-    category: 'gadgets',
-    image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
-  },
-  {
-    title: 'GoPro Hero 10',
-    description: 'Shoot high-quality videos and photos with crystal-clear detail.',
-    price_per_day: 18.99,
-    condition: 'Excellent',
-    category: 'cameras',
-    image_url: 'https://i.blogs.es/b44142/gopro-hero-10-black-2-/450_1000.jpg'
-  },
-  {
-    title: 'Canon xA60 4K',
-    description: 'Charge your devices effortlessly with this wireless charging pad.',
-    price_per_day: 9.99,
-    condition: 'New',
-    category: 'Cameras',
-    image_url: 'https://thumb.pccomponentes.com/w-530-530/articles/1064/10649216/135-canon-xa60-videocamara-profesional-ultrahd-4k-20x.jpg'
-  },
-  {
-    title: 'Smartwatch X',
-    description: 'Stay connected with the latest smartwatch on the market.',
-    price_per_day: 12.99,
-    condition: 'New',
-    category: 'Gadgets',
-    image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
-  },
-  {
-    title: 'Ultra-Slim Laptop',
-    description: 'Powerful and lightweight laptop for productivity on the go.',
-    price_per_day: 24.99,
-    condition: 'Like New',
-    category: 'Gadgets',
-    image_url: 'https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/11/PS5-Review-8-1024x768.jpg'
-  },
-  {
-    title: 'VR Glasses',
-    description: 'Experience the future with these cutting-edge AR glasses.',
-    price_per_day: 49.99,
-    condition: 'Excellent',
-    category: 'Gadgets',
-    image_url: 'https://www.apple.com/v/apple-vision-pro/b/images/overview/visionos/drawer/voice_startframe__c0a4vcs48m0y_large.jpg'
-  },
-  {
-    title: 'Drone DJI Mini 3',
-    description: 'Capture stunning aerial footage with this advanced drone.',
-    price_per_day: 39.99,
-    condition: 'Good',
-    category: 'Gadgets',
+    category: 'Consoles',
     image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
   },
   {
@@ -157,7 +205,7 @@ products = [
     description: 'Stay connected with the latest smartwatch on the market.',
     price_per_day: 12.99,
     condition: 'New',
-    category: 'Gadgets',
+    category: 'Consoles',
     image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
   },
   {
@@ -173,7 +221,7 @@ products = [
     description: 'Experience the future with these cutting-edge AR glasses.',
     price_per_day: 49.99,
     condition: 'Excellent',
-    category: 'Gadgets',
+    category: 'Outdoor',
     image_url: 'https://www.apple.com/v/apple-vision-pro/b/images/overview/visionos/drawer/voice_startframe__c0a4vcs48m0y_large.jpg'
   },
   {
@@ -181,7 +229,7 @@ products = [
     description: 'Capture stunning aerial footage with this advanced drone.',
     price_per_day: 39.99,
     condition: 'Good',
-    category: 'Gadgets',
+    category: 'Audio',
     image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
   },
   {
@@ -205,7 +253,7 @@ products = [
     description: 'Stay connected with the latest smartwatch on the market.',
     price_per_day: 12.99,
     condition: 'New',
-    category: 'Gadgets',
+    category: 'Audio',
     image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
   },
   {
@@ -213,7 +261,7 @@ products = [
     description: 'Powerful and lightweight laptop for productivity on the go.',
     price_per_day: 24.99,
     condition: 'Like New',
-    category: 'Gadgets',
+    category: 'Audio',
     image_url: 'https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/11/PS5-Review-8-1024x768.jpg'
   },
   {
@@ -221,7 +269,7 @@ products = [
     description: 'Experience the future with these cutting-edge AR glasses.',
     price_per_day: 49.99,
     condition: 'Excellent',
-    category: 'Gadgets',
+    category: 'Audio',
     image_url: 'https://www.apple.com/v/apple-vision-pro/b/images/overview/visionos/drawer/voice_startframe__c0a4vcs48m0y_large.jpg'
   },
   {
@@ -229,7 +277,7 @@ products = [
     description: 'Capture stunning aerial footage with this advanced drone.',
     price_per_day: 39.99,
     condition: 'Good',
-    category: 'gadgets',
+    category: 'Audio',
     image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
   },
   {
@@ -237,7 +285,7 @@ products = [
     description: 'Shoot high-quality videos and photos with crystal-clear detail.',
     price_per_day: 18.99,
     condition: 'Excellent',
-    category: 'cameras',
+    category: 'Cameras',
     image_url: 'https://i.blogs.es/b44142/gopro-hero-10-black-2-/450_1000.jpg'
   },
   {
@@ -245,7 +293,7 @@ products = [
     description: 'Charge your devices effortlessly with this wireless charging pad.',
     price_per_day: 9.99,
     condition: 'New',
-    category: 'cameras',
+    category: 'Cameras',
     image_url: 'https://thumb.pccomponentes.com/w-530-530/articles/1064/10649216/135-canon-xa60-videocamara-profesional-ultrahd-4k-20x.jpg'
   },
   {
@@ -253,7 +301,7 @@ products = [
     description: 'Stay connected with the latest smartwatch on the market.',
     price_per_day: 12.99,
     condition: 'New',
-    category: 'gadgets',
+    category: 'Consoles',
     image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
   },
   {
@@ -261,7 +309,7 @@ products = [
     description: 'Powerful and lightweight laptop for productivity on the go.',
     price_per_day: 24.99,
     condition: 'Like New',
-    category: 'Gadgets',
+    category: 'Consoles',
     image_url: 'https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/11/PS5-Review-8-1024x768.jpg'
   },
   {
@@ -269,7 +317,7 @@ products = [
     description: 'Experience the future with these cutting-edge AR glasses.',
     price_per_day: 49.99,
     condition: 'Excellent',
-    category: 'gadgets',
+    category: 'Consoles',
     image_url: 'https://www.apple.com/v/apple-vision-pro/b/images/overview/visionos/drawer/voice_startframe__c0a4vcs48m0y_large.jpg'
   },
   {
@@ -277,7 +325,7 @@ products = [
     description: 'Capture stunning aerial footage with this advanced drone.',
     price_per_day: 39.99,
     condition: 'Good',
-    category: 'gadgets',
+    category: 'Consoles',
     image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
   },
   {
@@ -285,7 +333,7 @@ products = [
     description: 'Shoot high-quality videos and photos with crystal-clear detail.',
     price_per_day: 18.99,
     condition: 'Excellent',
-    category: 'cameras',
+    category: 'Cameras',
     image_url: 'https://i.blogs.es/b44142/gopro-hero-10-black-2-/450_1000.jpg'
   },
   {
@@ -293,55 +341,7 @@ products = [
     description: 'Charge your devices effortlessly with this wireless charging pad.',
     price_per_day: 9.99,
     condition: 'New',
-    category: 'cameras',
-    image_url: 'https://thumb.pccomponentes.com/w-530-530/articles/1064/10649216/135-canon-xa60-videocamara-profesional-ultrahd-4k-20x.jpg'
-  },
-  {
-    title: 'Smartwatch X',
-    description: 'Stay connected with the latest smartwatch on the market.',
-    price_per_day: 12.99,
-    condition: 'New',
-    category: 'gadgets',
-    image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
-  },
-  {
-    title: 'Ultra-Slim Laptop',
-    description: 'Powerful and lightweight laptop for productivity on the go.',
-    price_per_day: 24.99,
-    condition: 'Like New',
-    category: 'gadgets',
-    image_url: 'https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/11/PS5-Review-8-1024x768.jpg'
-  },
-  {
-    title: 'VR Glasses',
-    description: 'Experience the future with these cutting-edge AR glasses.',
-    price_per_day: 49.99,
-    condition: 'Excellent',
-    category: 'gadgets',
-    image_url: 'https://www.apple.com/v/apple-vision-pro/b/images/overview/visionos/drawer/voice_startframe__c0a4vcs48m0y_large.jpg'
-  },
-  {
-    title: 'Drone DJI Mini 3',
-    description: 'Capture stunning aerial footage with this advanced drone.',
-    price_per_day: 39.99,
-    condition: 'Good',
-    category: 'gadgets',
-    image_url: 'https://m.media-amazon.com/images/I/51sV-rg4KqL._AC_UF894,1000_QL80_.jpg'
-  },
-  {
-    title: 'GoPro Hero 10',
-    description: 'Shoot high-quality videos and photos with crystal-clear detail.',
-    price_per_day: 18.99,
-    condition: 'Excellent',
-    category: 'cameras',
-    image_url: 'https://i.blogs.es/b44142/gopro-hero-10-black-2-/450_1000.jpg'
-  },
-  {
-    title: 'Canon xA60 4K',
-    description: 'Charge your devices effortlessly with this wireless charging pad.',
-    price_per_day: 9.99,
-    condition: 'New',
-    category: 'cameras',
+    category: 'Cameras',
     image_url: 'https://thumb.pccomponentes.com/w-530-530/articles/1064/10649216/135-canon-xa60-videocamara-profesional-ultrahd-4k-20x.jpg'
   }
 ]

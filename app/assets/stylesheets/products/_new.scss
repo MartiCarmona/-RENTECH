@@ -5,7 +5,6 @@
     align-items: center;
     height: 100vh;
 
-
     .info h1{
       font-size: 25px;
       font-weight: bold;
@@ -21,24 +20,24 @@
 
     .form-row {
       display: flex;
-      flex-wrap: wrap; /* Allow wrapping to the next line if needed */
-      margin-bottom: 1rem; /* Add some spacing between the form groups */
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
       margin-top: 3rem;
     }
 
     .form-group {
-      flex: 1; /* Each form group takes equal width within the container */
-      margin-right: 1rem; /* Add some spacing between the form groups */
-      margin-bottom: 1.5rem; /* Adjust vertical spacing if needed */
+      flex: 1;
+      margin-right: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     .form-group.category {
-      flex: 0 0 20%; /* Specify a fixed width for the price form, adjust as needed */
+      flex: 0 0 20%;
     }
 
 
     .form-group.price {
-      flex: 0 0 15%; /* Specify a fixed width for the price form, adjust as needed */
+      flex: 0 0 15%;
     }
 
     h1 {
@@ -91,7 +90,7 @@
         border: none;
         cursor: pointer;
         font-size: 16px;
-        border-radius: 5px;
+        border-radius: 20px;
         text-align: center;
         margin-bottom: 2rem;
       }

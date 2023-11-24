@@ -7,8 +7,6 @@ class Product < ApplicationRecord
 
   validate :image_format
 
-
-
   def image_format
     return unless image.attached?
 

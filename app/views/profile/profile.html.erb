@@ -12,7 +12,6 @@
             <div class="product-info">
               <span class="price">€<%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %></span>
               <p class="title"><%= product.title %></p>
-              <!-- Add more information here as needed -->
             </div>
           </div>
         <% end %>
@@ -28,7 +27,6 @@
               <div class="product-info">
                 <span class="price">€<%= rented_product.price_per_day.to_i == rented_product.price_per_day ? rented_product.price_per_day.to_i : rented_product.price_per_day %></span>
                 <p class="title"><%= rented_product.title %></p>
-                <!-- Add more information here as needed -->
               </div>
             </div>
           <% end %>

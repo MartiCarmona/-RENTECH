@@ -1,11 +1,12 @@
 <section id="content" class="container">
+<% unless params[:category].present? %>
+  <h2 class="my-4"><strong>Recently Seen:</strong></h2>
+<% end %>
+<% if params[:category].present? %>
+  <h2 class="my-4"><strong> <%= params[:category].camelcase %></strong></h2>
+<% end %>
 
-  <% if params[:category].present? %>
-    <h2 class="my-4"><strong> <%= params[:category].camelcase %></strong></h2>
-  <% else %>
-    <% unless params[:search].present? %>
-      <h2 class="my-4"><strong>Recently Seen:</strong></h2>
-       <div class="products-grid">
+  <div class="products-grid">
     <% @products.first(5).each do |product| %>
       <%= link_to product_path(product), class: 'product-link' do %>
         <div class="product-card">
@@ -18,53 +19,25 @@
       <% end %>
     <% end %>
   </div>
-
-    <% end %>
+  <% unless params[:category].present? %>
+    <h2 class="my-4"><strong>Recommended for you:</strong></h2>
   <% end %>
-
-  <% if params[:search].present? %>
-    <% if @products.blank? %>
-      <h2 class="my-4"><strong>No results found for: <%= params[:search] %></strong></h2>
-    <% else %>
-      <h2 class="my-4"><strong>Search results for: <%= params[:search] %></strong></h2>
-      <div class="products-grid">
-        <% @products.each do |product| %>
-          <%= link_to product_path(product), class: 'product-link' do %>
-            <div class="product-card">
-              <%= image_tag(product.image, class: 'product-image') if product.image.attached? %>
-              <div class="product-info">
-                <span class="price">€<%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %></span>
-                <p class="title"><%= product.title %></p>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    <% end %>
-  <% else %>
-    <% unless params[:category].present? %>
-      <h2 class="my-4"><strong>Recommended for you:</strong></h2>
-    <% end %>
-
-    <div class="products-grid">
-      <% @products.drop(5).each do |product| %>
-        <%= link_to product_path(product), class: 'product-link' do %>
-          <div class="product-card">
-            <%= image_tag(product.image, class: 'product-image') if product.image.attached? %>
-            <div class="product-info">
-              <span class="price"><%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %>€</span>
-              <p class="title"><%= product.title %></p>
-            </div>
+  <div class="products-grid">
+    <% @products.drop(5).each do |product| %>
+      <%= link_to product_path(product), class: 'product-link' do %>
+        <div class="product-card">
+          <%= image_tag(product.image, class: 'product-image') if product.image.attached? %>
+          <div class="product-info">
+            <span class="price"><%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %>€</span>
+            <p class="title"><%= product.title %></p>
           </div>
-        <% end %>
+        </div>
       <% end %>
-    </div>
-  <% end %>
-
+    <% end %>
+  </div>
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>">
       <%= value %>
     </div>
   <% end %>
-
 </section>

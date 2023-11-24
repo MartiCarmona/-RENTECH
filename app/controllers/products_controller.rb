@@ -4,10 +4,8 @@ class ProductsController < ApplicationController
 def index
   if params[:search].present?
     @products = Product.where("title ILIKE ? OR description ILIKE ? OR category ILIKE ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
-
   elsif params[:category].present?
     @products = Product.where(category: params[:category]).where.not(user: current_user)
-
   else
     @products = Product.all.where.not(user: current_user)
   end
@@ -19,7 +17,6 @@ end
 
   def new
     @product = Product.new
-    @categories = Category.all
   end
 
   def create

@@ -76,13 +76,12 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_24_123529) do
   end
 
   create_table "rentals", force: :cascade do |t|
-<<<<<<< HEAD
-=======
     t.bigint "user_id"
     t.bigint "product_id"
->>>>>>> master
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_rentals_on_product_id"
+    t.index ["user_id"], name: "index_rentals_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -117,6 +116,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_24_123529) do
   add_foreign_key "favorites", "products"
   add_foreign_key "favorites", "users"
   add_foreign_key "products", "users"
+  add_foreign_key "rentals", "products"
+  add_foreign_key "rentals", "users"
   add_foreign_key "reviews", "bookings"
   add_foreign_key "reviews", "users"
 end

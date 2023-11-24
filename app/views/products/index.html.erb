@@ -8,7 +8,7 @@
 
   <div class="products-grid">
     <% @products.first(5).each do |product| %>
-      <%= link_to product_path(product), class: 'product-link' do %>
+      <%= link_to product_path(product), class: 'product-link mb-3' do %>
         <div class="product-card">
           <%= image_tag(product.image, class: 'product-image') if product.image.attached? %>
           <div class="product-info">
@@ -21,8 +21,10 @@
     <% end %>
   </div>
 
-    <% end %>
+   <% unless params[:category].present? %>
+    <h2 class="my-4"><strong>Recommended for you:</strong></h2>
   <% end %>
+
   <div class="products-grid">
     <% @products.drop(5).each do |product| %>
       <%= link_to product_path(product), class: 'product-link' do %>
@@ -38,25 +40,7 @@
         </div>
       <% end %>
     <% end %>
-  <% else %>
-    <% unless params[:category].present? %>
-      <h2 class="my-4"><strong>Recommended for you:</strong></h2>
-    <% end %>
-
-    <div class="products-grid">
-      <% @products.drop(5).each do |product| %>
-        <%= link_to product_path(product), class: 'product-link' do %>
-          <div class="product-card">
-            <%= image_tag(product.image, class: 'product-image') if product.image.attached? %>
-            <div class="product-info">
-              <span class="price"><%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %>€</span>
-              <p class="title"><%= product.title %></p>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-  <% end %>
+  </div>
 
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>">

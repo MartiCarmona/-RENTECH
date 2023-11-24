@@ -48,13 +48,16 @@
       align-items: center;
       margin: 0.5rem;
 
-      .product-icon {
+      .product-icon-filled{
+        color: #007883;
+        size: 10px;
       }
     }
 
     .title, .description {
       margin: 0.5rem;
     }
+
   }
 }
 

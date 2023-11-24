@@ -1,16 +1,19 @@
 Rails.application.routes.draw do
+  get 'favorites/index'
   devise_for :users
 
-  # Define root path (you can change the controller#action as needed)
   root to: 'products#index'
 
   resources :products do
     resources :bookings, only: [:create, :new, :show]
     resources :rentals, only: [:create]
+    member do
+      get 'toggle_favorite'
+    end
+    get 'favorites/index', to: 'favorites#index', on: :collection
 
   end
 
-  # Separate resources for bookings to handle other actions
   resources :bookings, only: [] do
     member do
       patch 'accept'
@@ -19,7 +22,6 @@ Rails.application.routes.draw do
     resources :reviews, only: [:create, :new]
   end
 
-  # Routes for user profiles
   resources :users, only: [:show] do
     resources :products, only: [:index]
     resources :bookings, only: [:index]

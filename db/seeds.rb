@@ -1,5 +1,6 @@
 require 'open-uri'
 
+
 Product.destroy_all
 User.destroy_all
 

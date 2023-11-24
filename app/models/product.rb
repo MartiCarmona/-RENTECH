@@ -1,15 +1,15 @@
 class Product < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   has_one_attached :image
-  has_many :rentals
+  has_many :rentals, dependent: :destroy
 
   has_many :rented_by, through: :rentals, source: :user
   has_many :favorite_users, through: :favorites, source: :user
 
   validate :image_format
 
-  has_many :favorites
+  has_many :favorites,  dependent: :destroy
   has_many :favorited_by, through: :favorites, source: :user
 
   def favorited_by?(user)

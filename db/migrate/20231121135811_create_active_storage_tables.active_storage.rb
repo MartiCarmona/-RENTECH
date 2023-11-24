@@ -1,5 +1,6 @@
 class CreateActiveStorageTables < ActiveRecord::Migration[7.0]
-  def change    primary_key_type, foreign_key_type = primary_and_foreign_key_types
+  def change
+    primary_key_type, foreign_key_type = primary_and_foreign_key_types
 
     create_table :active_storage_blobs, id: primary_key_type do |t|
       t.string   :key,          null: false

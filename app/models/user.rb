@@ -8,4 +8,14 @@ class User < ApplicationRecord
   has_many :rentals
   has_many :rented_products, through: :rentals, source: :product
 
+  has_many :favorites
+  has_many :favorite_products, through: :favorites, source: :product
+
+  def toggle_favorite(product)
+    if favorite_products.include?(product)
+      favorite_products.delete(product)
+    else
+      favorite_products << product
+    end
+  end
 end

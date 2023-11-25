@@ -4,17 +4,19 @@ Product.destroy_all
 User.destroy_all
 
 User.create(email: 'ignacio@gmail.com', first_name: 'Ignacio', last_name: 'Borrell', password: '123456')
+
 User.create(email: 'nahuel@gmail.com', first_name: 'Nahuel', last_name: 'Ribera', password: '123456')
+
 User.create(email: 'marti@gmail.com', first_name: 'Marti', last_name: 'Carmona', password: '123456')
 
 products = [
   {
-    title: 'Smartwatch X',
-    description: 'Stay connected with the latest smartwatch on the market.',
-    price_per_day: 12.99,
-    condition: 'New',
-    category: 'Gadgets',
-    image_url: 'https://m.media-amazon.com/images/I/51rkP9-meSL.jpg'
+    title: 'Range Rover Sport',
+    description: 'The Range Rover Sport is a British luxury mid-size SUV made by Land Rover.',
+    price_per_day: 72.99,
+    condition: 'As New',
+    category: 'Outdoor',
+    image_url: 'https://lemauto.landrover.es/wp-content/uploads/sites/89/2019/08/rage-rover-2018-TD4-FujiWhite-150CV.jpg'
   },
   {
     title: 'Ultra-Slim Laptop',

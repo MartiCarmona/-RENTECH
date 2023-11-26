@@ -6,20 +6,33 @@
   <h2 class="my-4"><strong> <%= params[:category].camelcase %></strong></h2>
 <% end %>
 
-  <div class="products-grid">
-    <% @products.first(5).each do |product| %>
+<div class="products-grid">
+  <% @products.first(5).each do |product| %>
+    <div class="product-card">
       <%= link_to product_path(product), class: 'product-link' do %>
-        <div class="product-card">
-          <%= image_tag(product.image, class: 'product-image') if product.image.attached? %>
-          <div class="product-info">
-            <span
-              class="price">€<%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %>            </span>
-            <p class="title"><%= product.title %></p>
-          </div>
+        <%= image_tag(product.image, class: 'product-image') if product.image.attached? %>
+        <div class="product-info">
+          <% if product.favorited_by?(current_user) %>
+            <%= link_to toggle_favorite_product_path(product), method: :post, class: 'product-icon-filled', remote: true do %>
+              <%= image_tag 'like_filled.png' %>
+            <% end %>
+          <% else %>
+            <%= link_to toggle_favorite_product_path(product), method: :post, class: 'product-icon', remote: true do %>
+              <%= image_tag 'like.png' %>
+            <% end %>
+          <% end %>
+          <span class="price">
+            €<%= product.price_per_day.to_i == product.price_per_day ? product.price_per_day.to_i : product.price_per_day %>
+          </span>
+          <p class="title"><%= product.title %></p>
         </div>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
+</div>
+
+
+
 
   <% unless params[:category].present? %>
     <h2 class="my-4"><strong>Recommended for you:</strong></h2>

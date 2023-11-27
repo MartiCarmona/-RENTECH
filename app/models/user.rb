@@ -18,4 +18,8 @@ class User < ApplicationRecord
       favorite_products << product
     end
   end
+
+  def rented?(product)
+    rentals.exists?(product_id: product.id)
+  end
 end

@@ -1,3 +1,17 @@
+.product-show-container {
+  position: relative;
+
+  .btn-favorite-sticker{
+    background-color: #007bff; /* Adjust the background color */
+    color: #ffffff; /* Adjust the text color */
+    border-radius: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+}
+
 #booking {
   text-align: center;
   padding-left: 4rem;
@@ -152,16 +166,35 @@
         border-radius: 0.5rem;
         margin-bottom: -5rem;
 
+        .row-title-fav {
+          display: flex; /* Use flexbox to make children appear in a row */
+          align-items: center; /* Center vertically within the flex container */
+          margin-bottom: 20px; /* Add margin as needed */
+          justify-content: space-between;
+          width: 90%;
+
+          .product-title {
+            font-size: 2rem;
+            color: #333;
+          }
+
+          .btn-favorite-sticker {
+            background-color: #007bff;
+            color: #ffffff;
+            border-radius: 20px;
+            font-size: 16px;
+            padding: 8px 16px; /* Adjust padding to control height */
+            line-height: 0.5; /* Adjust line-height to control height */
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 6px;
+          }
+
         .product-price {
           font-size: 1.5rem;
           color: #3c3c3c;
           display: block;
-        }
-
-        .product-title {
-          font-size: 2rem;
-          color: #333;
-          margin-bottom: 30px;
         }
 
         .product-condition,
@@ -187,4 +220,5 @@
 
     }
   }
+}
 }

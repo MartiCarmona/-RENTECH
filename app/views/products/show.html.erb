@@ -5,11 +5,14 @@
     </div>
     <div class="product-details">
       <div class="product-info">
-        <h1 class="product-title"><%= @product.title %></h1>
+        <div class="row-title-fav">
+          <h1 class="product-title"><%= @product.title %></h1>
+          <a href="<%= root_path(@product) %>" class="btn-favorite-sticker">Fav</a>
+        </div>
         <span class="product-condition"><%= @product.condition %></span>
         <span class="product-category"><%= @product.category.camelcase %></span>
         <p class="product-description"><%= @product.description %></p>
-         <strong><span class="product-price"><%= number_to_currency(@product.price_per_day, unit: '', format: "%n€") %>/day</span></strong>
+        <strong><span class="product-price"><%= number_to_currency(@product.price_per_day, unit: '', format: "%n€") %>/day</span></strong>
       </div>
       <div class="booking-container">
         <div id="booking">

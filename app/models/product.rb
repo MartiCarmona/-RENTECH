@@ -24,7 +24,32 @@ class Product < ApplicationRecord
     end
   end
 
+  def rented_by?(user)
+    bookings.exists?(user: user)
+  end
+
+  def already_rented?(user)
+    rentals.where(user: user).exists?
+  end
+
   def self.search(query)
     where("name ILIKE ? OR category ILIKE ? OR description ILIKE ?", "%#{query}%", "%#{query}%", "%#{query}%")
+  end
+
+  def rented_dates_for_user(user)
+    rentals.where(user: user).pluck(:start_date, :end_date)
+  end
+
+  def valid_dates?(booking)
+    rentals.each do |rental|
+      if rental.start_date <= booking.start_date && rental.end_date >= booking.start_date
+        return false
+      elsif rental.start_date <= booking.end_date && rental.end_date >= booking.end_date
+        return false
+      elsif rental.start_date >= booking.start_date && rental.end_date <= booking.end_date
+        return false
+      end
+    end
+    true
   end
 end

@@ -13,7 +13,11 @@ end
 
   def show
     @product = Product.find(params[:id])
+    @booking = Booking.new
 
+    if user_signed_in?
+      @rented_dates = @product.rented_dates_for_user(current_user)
+    end
   end
 
   def new

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     member do
       get 'toggle_favorite'
     end
-    get 'favorites/index', to: 'favorites#index', on: :collection
+    get 'favorites/index', to: 'favorites#index'
 
   end
 

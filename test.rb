@@ -1,34 +1,53 @@
-Rails.application.routes.draw do
-  # Devise routes for User authentication
-  devise_for :users
+<section id="content" class="product-show-container">
+  <div class="product-card">
+    <div class="product-image-wrapper">
+      <%= image_tag(@product.image, class: 'product-image') if @product.image.attached? %>
+    </div>
 
-  # Define root path (you can change the controller#action as needed)
-  root to: 'pages#home'
+    <div class="product-details">
+      <div class="product-info">
+        <h1 class="product-title"><%= @product.title %></h1>
+        <span class="product-condition"><%= @product.condition %></span>
+        <span class="product-category"><%= @product.category.camelcase %></span>
+        <p class="product-description"><%= @product.description %></p>
+        <strong><span class="product-price"><%= number_to_currency(@product.price_per_day, unit: '', format: "%n€") %>/day</span></strong>
+      </div>
 
-  # Resources for products
-  resources :products do
-    resources :bookings, only: [:create, :new] # Nested bookings within products for creating them
-  end
+      <% unless current_user == @product.user %>
+        <div class="rent-button-wrapper">
+          <button class="btn-chat">Chat</button>
+          <% if user_signed_in? %>
+            <% if current_user.products.exclude?(@product) %>
+              <% if @product.favorited_by?(current_user) %>
+                <%= link_to toggle_favorite_product_path(@product), method: :post, class: 'product-icon-filled' do %>
+                  <%= image_tag 'like_filled.png' %>
+                <% end %>
+              <% else %>
+                <%= link_to toggle_favorite_product_path(@product), method: :post, class: 'product-icon' do %>
+                  <%= image_tag 'like.png' %>
+                <% end %>
+              <% end %>
+            <% end %>
 
-  # Separate resources for bookings to handle other actions
-  resources :bookings, only: [] do
-    member do
-      patch 'accept'    # To accept a booking
-      patch 'decline'   # To decline a booking
-    end
-    resources :reviews, only: [:create, :new] # Nested reviews within bookings
-  end
+              <div class="booking-container">
+                      <div id="booking">
+                        <% unless current_user == @product.user %>
+                            <%= simple_form_for [@product, Booking.new], html: { id: 'rental-form', data: { controller: 'rental-form' } } do |f| %>
+                            <div class="date-inputs">
+                              <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+                              <%= f.input :end_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+                            </div>
+                         <%= f.button :submit, 'Rent now!', class: 'btn-rent-now', data: { disable_with: 'Renting...' }, disabled: current_user.rented?(@product) %>
 
-  # Routes for user profiles
-  resources :users, only: [:show] do
-    resources :products, only: [:index] # Nested products within users to show user's products
-    resources :bookings, only: [:index] # Nested bookings within users to show user's bookings
-    resources :reviews, only: [:index]  # Nested reviews within users to show user's reviews
-  end
-
-  # Other custom routes as required by your application
-  # Example: get 'search', to: 'products#search' # If you have a search action in products controller
-
-  # You can add more custom routes as required for your application
-end
-
+                          <% end %>
+                        <% end %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          <% else %>
+            <%= link_to 'Rent now!', new_user_session_path, class: 'btn-rent-now' %>
+          <% end %>
+        </div>
+      <% end %>
+</section>

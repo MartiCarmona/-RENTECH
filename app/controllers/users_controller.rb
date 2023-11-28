@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @products = @user.products
-    @rented_products = @user.rented_products
+    @booked_products = @user.booked_products
     render 'profile/profile'
   end
 end

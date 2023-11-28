@@ -2,9 +2,8 @@ class Product < ApplicationRecord
   belongs_to :user
   has_many :bookings, dependent: :destroy
   has_one_attached :image
-  has_many :rentals, dependent: :destroy
 
-  has_many :rented_by, through: :rentals, source: :user
+  has_many :rented_by, through: :bookings, source: :user
   has_many :favorite_users, through: :favorites, source: :user
 
   validate :image_format
@@ -29,24 +28,24 @@ class Product < ApplicationRecord
   end
 
   def already_rented?(user)
-    rentals.where(user: user).exists?
+    bookings.where(user: user).exists?
   end
 
   def self.search(query)
     where("name ILIKE ? OR category ILIKE ? OR description ILIKE ?", "%#{query}%", "%#{query}%", "%#{query}%")
   end
 
-  def rented_dates_for_user(user)
-    rentals.where(user: user).pluck(:start_date, :end_date)
+  def booked_dates_for_user(user)
+    bookings.where(user: user).pluck(:start_date, :end_date)
   end
 
   def valid_dates?(booking)
-    rentals.each do |rental|
-      if rental.start_date <= booking.start_date && rental.end_date >= booking.start_date
+    bookings.each do |booking|
+      if booking.start_date <= booking.start_date && booking.end_date >= booking.start_date
         return false
-      elsif rental.start_date <= booking.end_date && rental.end_date >= booking.end_date
+      elsif booking.start_date <= booking.end_date && booking.end_date >= booking.end_date
         return false
-      elsif rental.start_date >= booking.start_date && rental.end_date <= booking.end_date
+      elsif booking.start_date >= booking.start_date && booking.end_date <= booking.end_date
         return false
       end
     end

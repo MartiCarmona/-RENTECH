@@ -1,22 +1,22 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
-def index
-  if params[:search].present?
-    @products = Product.where("title ILIKE ? OR description ILIKE ? OR category ILIKE ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
-  elsif params[:category].present?
-    @products = Product.where(category: params[:category]).where.not(user: current_user)
-  else
-    @products = Product.all.where.not(user: current_user)
+  def index
+    if params[:search].present?
+      @products = Product.where("title ILIKE ? OR description ILIKE ? OR category ILIKE ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
+    elsif params[:category].present?
+      @products = Product.where(category: params[:category]).where.not(user: current_user)
+    else
+      @products = Product.all.where.not(user: current_user)
+    end
   end
-end
 
   def show
     @product = Product.find(params[:id])
     @booking = Booking.new
 
     if user_signed_in?
-      @rented_dates = @product.rented_dates_for_user(current_user)
+      @booked_dates = @product.booked_dates_for_user(current_user)
     end
   end
 
